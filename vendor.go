@@ -22,7 +22,7 @@ func ParseDockerURL(img string) (types.ImageReference, *url.URL, error) {
 	}
 
 	// Strip down some info for the reference URL
-	refUri := uri
+	refUri := *uri
 	refUri.User = nil
 	refUri.Scheme = ""
 	refImage, err := docker.Transport.ParseReference(refUri.String())

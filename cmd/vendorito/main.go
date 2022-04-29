@@ -131,7 +131,7 @@ func main() {
 			},
 			&cli.IntFlag{
 				Name:     "retry-max",
-				Usage:    "In case of error, retry the operation this many times, if 0 or not set, no retry is set",
+				Usage:    "In case of error, retry the operation this many times, if 0 or not set, no further attempts are made in case of failure",
 				Value:    0,
 				EnvVars:  []string{"VENDORITO_RETRY_MAX"},
 				Required: false,

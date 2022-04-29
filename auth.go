@@ -40,11 +40,12 @@ func AddAuthToContext(context *types.SystemContext, authStore *AuthStore, info *
 				return fmt.Errorf("could not get password for user %s (%s): %w", info.User.Username(), info.Host, err)
 			}
 			context.DockerAuthConfig = authConfig
-		} else {
-			context.DockerAuthConfig = &types.DockerAuthConfig{
-				Username: info.User.Username(),
-				Password: password,
-			}
+			return nil
+		}
+
+		context.DockerAuthConfig = &types.DockerAuthConfig{
+			Username: info.User.Username(),
+			Password: password,
 		}
 		return nil
 	}
