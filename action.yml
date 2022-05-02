@@ -1,0 +1,19 @@
+name: 'Vendorito'
+description: 'Vendor OCI images across repositories'
+inputs:
+  source:
+    description: 'Source OCI image URL'
+    required: true
+  target:
+    description: 'Target OCI image URL'
+    required: true
+  credentials:
+    description: 'OCI credentials'
+    required: false
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  env:
+    VENDORITO_CREDENTIALS: '{{ inputs.credentials }}'
+  args:
+    - -i ${{ inputs.source }} -o ${{ inputs.target }}
