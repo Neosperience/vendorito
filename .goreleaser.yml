@@ -1,0 +1,33 @@
+project_name: vendorito
+before:
+  hooks:
+    - go mod tidy
+builds:
+  - env:
+      - CGO_ENABLED=0
+    tags:
+      - containers_image_openpgp
+    goos:
+      - linux
+    goarch:
+      - amd64
+      - arm64
+    main: ./cmd/vendorito
+archives:
+  - replacements:
+      linux: Linux
+checksum:
+  name_template: 'checksums.txt'
+snapshot:
+  name_template: "{{ incpatch .Version }}-next"
+release:
+  draft: true
+  prerelease: auto
+  header: |
+    ## Shipper ({{ .Tag }})
+    ### Changelog
+    <copy the relevant CHANGELOG.md entries>
+    ### Docker images
+    - `docker pull ghcr.io/neosperience/vendorito:{{ .Tag }}`
+changelog:
+  skip: true
