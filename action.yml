@@ -16,4 +16,4 @@ runs:
   env:
     VENDORITO_CREDENTIALS: '{{ inputs.credentials }}'
   args:
-    - -i ${{ inputs.source }} -o ${{ inputs.target }}
+    - vendorito -i ${{ inputs.source }} -o ${{ inputs.target }}
