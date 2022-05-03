@@ -36,8 +36,8 @@ jobs:
           images: |
             ghcr.io/${{ github.repository }}
           labels: |
-            org.opencontainers.image.title=Shipper
-            org.opencontainers.image.description=Ship your apps the GitOps way!
+            org.opencontainers.image.title=Vendorito
+            org.opencontainers.image.description=Vendor your OCI images
             org.opencontainers.image.vendor=Neosperience
           tags: |
             type=semver,pattern={{version}}
