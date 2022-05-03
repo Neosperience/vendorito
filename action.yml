@@ -14,7 +14,7 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   env:
-    VENDORITO_CREDENTIALS: '{{ inputs.credentials }}'
+    VENDORITO_CREDENTIALS: '${{ inputs.credentials }}'
   args:
     - vendorito
     - -i
