@@ -14,4 +14,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `vendorito` CLI tool for copying OCI images across repositories.
 
 [unreleased]: https://github.com/neosperience/vendorito/compare/v0.1.0...HEAD
-[v0.1.0]: https://github.com/neosperience/vendorito/releases/tag/v0.1.0
+[0.1.0]: https://github.com/neosperience/vendorito/releases/tag/v0.1.0
