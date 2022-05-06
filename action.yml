@@ -1,5 +1,8 @@
 name: 'Vendorito'
 description: 'Vendor OCI images across repositories'
+branding:
+  icon: package
+  color: blue
 inputs:
   source:
     description: 'Source OCI image URL'
