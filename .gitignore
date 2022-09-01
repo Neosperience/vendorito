@@ -4,3 +4,4 @@ report.xml
 dist/
 .idea
 result/
+direnv/
