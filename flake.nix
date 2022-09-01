@@ -22,7 +22,8 @@
           subPackages = [ "cmd/vendorito" ];
           buildInputs = with pkgs; [ gpgme.dev ];
 
-          vendorSha256 = "sha256-grnbhPvDf4Z1BYhe7clUrgu6yb1RjQrzKdRbwGoUnsE=";
+          # vendorSha256 = pkgs.lib.fakeSha256;
+          vendorSha256 = "sha256-SGfB2v/vVlOFv+hJrzR60UTTf7vgAkokoi2HCDEew4I=";
         };
 
         apps.default = utils.lib.mkApp { drv = self.packages.${system}.default; };
