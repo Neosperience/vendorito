@@ -1,4 +1,4 @@
-module vendorito
+module github.com/Neosperience/vendorito
 
 go 1.18
 

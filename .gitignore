@@ -3,3 +3,4 @@ coverage.xml
 report.xml
 dist/
 .idea
+result/

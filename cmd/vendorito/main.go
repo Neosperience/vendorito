@@ -7,7 +7,7 @@ import (
 	"os"
 	"strings"
 	"time"
-	"vendorito"
+	"github.com/Neosperience/vendorito/pkg/vendorito"
 
 	"github.com/containers/common/pkg/retry"
 	"github.com/containers/image/v5/copy"
